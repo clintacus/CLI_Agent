@@ -11,3 +11,4 @@ wheels/
 
 #local environment
 .env
+calculator/
