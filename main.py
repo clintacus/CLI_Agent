@@ -4,6 +4,9 @@ from google import genai
 from google.genai import types
 from config import SYSTEM_PROMPT
 from functions.get_files_info import get_files_info, schema_get_files_info
+from functions.get_file_content import get_file_content, schema_get_file_content
+from functions.write_file import write_file, schema_write_file
+from functions.run_python_file import run_python_file, schema_run_python_file
 
 def main():
 
@@ -16,6 +19,9 @@ def main():
     available_functions = types.Tool(
     function_declarations=[
         schema_get_files_info,
+        schema_get_file_content,
+        schema_write_file,
+        schema_run_python_file,
     ]
 )
 
@@ -35,9 +41,11 @@ def main():
         print("Prompt tokens:", response.usage_metadata.prompt_token_count)
         print("Response tokens:", response.usage_metadata.candidates_token_count)
 
+    # If no function calls were made, print the response text
     if not response.function_calls:
         return response.text
 
+    # If function calls were made, print the function call details
     for function_call_part in response.function_calls:
         print(f"Calling function: {function_call_part.name}({function_call_part.args})")
 
