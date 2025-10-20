@@ -17,3 +17,6 @@ All paths you provide should be relative to the working directory. You do not ne
 
 # Set your desired working directory here
 WORKING_DIR = "./calculator"
+
+# Set the maximum number of iterations the agent can perform in a single session
+MAX_ITERS = 20
