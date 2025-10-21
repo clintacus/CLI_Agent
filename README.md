@@ -28,6 +28,6 @@ Configurations can be made in the config.py file.
 
 ## How to use
 
-From the command line run uv run main.py "(Prompt to the LLM)" [--verbose]
+From the command line while in the CLI_Agent folder run uv run main.py "(Prompt to the LLM)" [--verbose]
 
 Optional verbose tag includes your prompt and token usage in the output.
