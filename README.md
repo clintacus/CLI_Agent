@@ -10,7 +10,7 @@ It will also be able to execute python scripts.
 
 1. Pull the files down from locally
 2. Create a .env file inside the CLI_Agent folder. 
-3. Inside of the .env file enter GEMINI_API_KEY="<your API key here>" (API key can be generated from https://aistudio.google.com/api-keys)
+3. Inside of the .env file enter GEMINI_API_KEY="(your API key here)" (API key can be generated from https://aistudio.google.com/api-keys)
 
 ## Configurations
 
@@ -28,6 +28,6 @@ Configurations can be made in the config.py file.
 
 ## How to use
 
-From the command line run uv run main.py "<Prompt to the LLM>" [--verbose]
+From the command line run uv run main.py "(Prompt to the LLM)" [--verbose]
 
 Optional verbose tag includes your prompt and token usage in the output.
