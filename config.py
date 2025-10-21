@@ -22,4 +22,4 @@ WORKING_DIR = "./calculator"
 MAX_ITERS = 20
 
 # Specify the model to use
-MODEL = "gemini-2.5-flash"
+MODEL = "gemini-2.0-flash-001"
