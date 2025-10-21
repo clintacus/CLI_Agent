@@ -20,3 +20,6 @@ WORKING_DIR = "./calculator"
 
 # Set the maximum number of iterations the agent can perform in a single session
 MAX_ITERS = 20
+
+# Specify the model to use
+MODEL = "gemini-2.5-flash"

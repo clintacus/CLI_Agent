@@ -4,8 +4,7 @@ from google import genai
 from google.genai import types
 from dotenv import load_dotenv
 
-from config import SYSTEM_PROMPT
-from config import MAX_ITERS
+from config import SYSTEM_PROMPT, MAX_ITERS, MODEL
 from functions.call_function import call_function, available_functions
 
 
@@ -63,7 +62,7 @@ def main():
 def generate_content(client, messages, verbose):
     # Call the model with the user prompt and available functions
     response = client.models.generate_content(
-        model="gemini-2.0-flash-001",
+        model=MODEL,
         contents=messages,
         config=types.GenerateContentConfig(
             tools=[available_functions], system_instruction=SYSTEM_PROMPT
